@@ -5,18 +5,15 @@ close all
 clear all
 
 %vima = 0.01;
-vima = 0.01/pi;
+vima = 0.1/pi;
 %max = 100000;
-max = 1000;
+max = 100000;
 dependantVar = (0:vima:max);
 eConst = exp(1);
 thita = eConst*dependantVar;
 spiraGuideX = dependantVar.*eConst.*cos(thita);
 spiraGuideY = dependantVar.*eConst.*sin(thita);
 
-figure(4)
-hold on
-axis equal
 counter = 1;
 for jj=0:vima:max
     if (isprime(counter))
@@ -29,8 +26,8 @@ for jj=0:vima:max
 %       plot(primeSpiraX(counter),primeSpiraY(counter),'b.')
     end
     counter=counter+1;
-    100*(counter/((max/vima)+1))
-    pause(0.001)
+%     100*(counter/((max/vima)+1))
+%     pause(0.001)
 end
 counter = counter - 1
 
@@ -40,23 +37,23 @@ counter = counter - 1
  axis equal
  plot(spiraGuideX,spiraGuideY)
 % 
-% figure(2)
-% plot(primeSpiraX,primeSpiraY,'r.')
-% hold on
-% axis equal
-% 
-% figure(1)
-% hold on
-% axis equal
-% plot(spiraGuideX,spiraGuideY,'b.')
-% plot(primeSpiraX,primeSpiraY,'r.')
+figure(2)
+plot(primeSpiraX,primeSpiraY,'r.')
+hold on
+axis equal
+
+figure(1)
+hold on
+axis equal
+plot(spiraGuideX,spiraGuideY,'b.')
+plot(primeSpiraX,primeSpiraY,'r.')
 
 
 
-% figure(1)
-% plot(spiraGuideX,spiraGuideY)
-% figure(2)
-% plot(spiraGuideX,spiraGuideY,'*')
+figure(5)
+plot(spiraGuideX,spiraGuideY)
+figure(6)
+plot(spiraGuideX,spiraGuideY,'*')
 
 
 % clear all 
