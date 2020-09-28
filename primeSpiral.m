@@ -5,14 +5,17 @@ close all
 clear all
 
 %vima = 0.01;
-vima = 0.1/pi;
+%vima = 0.1/pi;
+vima = 1;
 %max = 100000;
-max = 100000;
+max = 100000000;
+
 dependantVar = (0:vima:max);
 eConst = exp(1);
-thita = eConst*dependantVar;
-spiraGuideX = dependantVar.*eConst.*cos(thita);
-spiraGuideY = dependantVar.*eConst.*sin(thita);
+%thita = eConst*dependantVar;
+thita = dependantVar;
+spiraGuideX = dependantVar.*cos(thita);
+spiraGuideY = dependantVar.*sin(thita);
 
 counter = 1;
 for jj=0:vima:max
