@@ -8,7 +8,7 @@ clear all
 %vima = 0.1/pi;
 vima = 1;
 %max = 100000;
-max = 100000000;
+max = 10000000;
 
 dependantVar = (0:vima:max);
 eConst = exp(1);
@@ -29,7 +29,7 @@ for jj=0:vima:max
 %       plot(primeSpiraX(counter),primeSpiraY(counter),'b.')
     end
     counter=counter+1;
-%     100*(counter/((max/vima)+1))
+     100*(counter/((max/vima)+1))
 %     pause(0.001)
 end
 counter = counter - 1
